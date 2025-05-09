@@ -1,0 +1,6 @@
+echo "venv/
+__pycache__/
+*.pyc
+airflow/logs/
+mlflow/
+.env" > .gitignore
