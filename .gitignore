@@ -1,6 +1,27 @@
-echo "venv/
+# Python
 __pycache__/
-*.pyc
-airflow/logs/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+
+# Data (tracked by DVC)
+/data/raw/
+/data/processed/
+
+# MLflow
+mlruns/
 mlflow/
-.env" > .gitignore
+
+# Airflow
+airflow/logs/
+airflow/*.pid
+
+# IDE
+.vscode/
+.idea/
+
+# Misc
+.env
+.DS_Store
