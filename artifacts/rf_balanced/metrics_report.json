@@ -1,0 +1,51 @@
+{
+    "metrics": {
+        "accuracy": 0.8366666666666667,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "roc_auc": 0.614996693121693
+    },
+    "parameters": {
+        "n_estimators": 200,
+        "max_depth": 15,
+        "min_samples_split": 2,
+        "min_samples_leaf": 1,
+        "class_weight": {
+            "0": 1,
+            "2": 10
+        },
+        "random_state": 42
+    },
+    "feature_importance": {
+        "feature": {
+            "2": "transaction_amount",
+            "0": "customer_id",
+            "7": "account_age_years",
+            "1": "transaction_date",
+            "4": "income",
+            "5": "credit_score",
+            "3": "age",
+            "10": "transaction_day",
+            "6": "num_previous_transactions",
+            "9": "transaction_month",
+            "11": "transaction_dayofweek",
+            "8": "is_premium_customer"
+        },
+        "importance": {
+            "2": 0.11802581823839735,
+            "0": 0.11606366631030679,
+            "7": 0.11024775003754678,
+            "1": 0.10283304933642276,
+            "4": 0.09965662246204172,
+            "5": 0.09700953695986235,
+            "3": 0.0954994321851887,
+            "10": 0.07426113273899111,
+            "6": 0.07061706581090281,
+            "9": 0.05924080551898776,
+            "11": 0.04581862435256599,
+            "8": 0.010726496048785816
+        }
+    },
+    "timestamp": "2025-05-11 00:41:51"
+}
