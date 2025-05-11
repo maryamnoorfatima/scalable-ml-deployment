@@ -1,21 +1,26 @@
 stages:
+  generate_data:
+    cmd: python src/data/generate_dataset.py
+    deps:
+      - src/data/generate_dataset.py
+    outs:
+      - data/raw/customer_transactions.csv
+
   preprocess:
     cmd: python src/data/preprocessing.py
     deps:
-      - data/raw
       - src/data/preprocessing.py
+      - data/raw/customer_transactions.csv
     outs:
-      - data/processed
+      - data/processed/processed_transactions.csv
   
   train:
-    cmd: python models/training/train.py
+    cmd: python src/models/train.py
     deps:
-      - data/processed
-      - models/training/train.py
-    params:
-      - params.yaml
+      - src/models/train.py
+      - data/processed/processed_transactions.csv
+    outs:
+      - models/model.pkl
     metrics:
       - metrics.json:
-          cache: false
-    outs:
-      - models/trained 
+          cache: false 

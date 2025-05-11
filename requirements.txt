@@ -6,3 +6,6 @@ flask
 psycopg2-binary
 pytest
 flake8 
+seaborn
+matplotlib 
+joblib
